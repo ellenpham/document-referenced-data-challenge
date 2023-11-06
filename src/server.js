@@ -10,6 +10,9 @@ app.get('/', (request, response) => {
     });
 });
 
+const BookRouter = require('./controllers/BookController');
+app.use('/books', BookRouter);
+
 module.exports = {
     app
 }
