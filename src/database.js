@@ -10,7 +10,7 @@ const mongoose = require('mongoose');
  */
 async function databaseConnect(){
     try {
-        await mongoose.connect('mongodb://localhost:27017/BookClubDB');
+        await mongoose.connect(process.env.DB_LOCAL_URI);
         console.log('Database connected!')
     } catch (error) {
         console.warn(`databaseConnect failed to connect to DB:\n${JSON.stringify(error)}`);

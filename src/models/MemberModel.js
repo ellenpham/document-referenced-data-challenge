@@ -13,6 +13,9 @@ const MemberSchema = new Schema({
     }
 });
 
+// database hook - not necessary
+// but there are more complex functionality we can do with schema using pre-save hook
+// example: encrypt password again if users change their password
 MemberSchema.pre(
     'save',
     async function (next) {
