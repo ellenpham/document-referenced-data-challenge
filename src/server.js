@@ -15,6 +15,10 @@ app.get('/', (request, response) => {
 const BookRouter = require('./controllers/BookController');
 app.use('/books', BookRouter);
 
+const UserRouter = require('./controllers/UserController');
+app.use('/members', UserRouter);
+
+
 module.exports = {
     app
 }

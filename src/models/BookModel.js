@@ -17,10 +17,10 @@ const BookSchema = new Schema({
         required: false,
         unique: false
     },
-    review: {
+    review: [{
         type: mongoose.Types.ObjectId,
         ref: 'Review'
-    },
+    }],
 });
 
 const Book = mongoose.model('Book', BookSchema);
